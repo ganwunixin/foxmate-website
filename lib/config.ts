@@ -1,9 +1,9 @@
 export const config = {
   download: {
-    windows: 'https://github.com/your-username/foxmate/releases/download/v1.0.0/FoxMate-v1.0.0.zip',
+    windows: 'https://drive.google.com/uc?export=download&id=1SNwaZTQfsDTZgp37NS_Q-q3kbLiF0q6z',
     mac: '',
     version: 'v1.0.0',
-    fileSize: '~200MB',
+    fileSize: '~400MB',
   },
   app: {
     name: 'FoxMate',
