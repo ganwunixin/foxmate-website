@@ -1,6 +1,6 @@
 export const config = {
   download: {
-    windows: 'https://drive.google.com/uc?export=download&id=1SNwaZTQfsDTZgp37NS_Q-q3kbLiF0q6z',
+    windows: 'https://foxmate.sfo3.cdn.digitaloceanspaces.com/FoxMate%20AI.zip',
     mac: '',
     version: 'v1.0.0',
     fileSize: '~400MB',
