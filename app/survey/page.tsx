@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 import { ChevronLeft, ChevronRight, Send, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
@@ -368,9 +369,15 @@ export default function SurveyPage() {
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
-            <span className="text-5xl mb-4 block">🦊</span>
+            <Image 
+              src="/98989.png" 
+              alt="FoxMate Logo" 
+              width={60} 
+              height={60}
+              className="w-16 h-16 object-contain mx-auto mb-4"
+            />
             <h1 className="text-4xl font-bold font-display mb-4 gradient-text">
-              FoxMate 用户调查
+              FoxMate.ai 用户调查
             </h1>
             <p className="text-gray-600">
               您的反馈将帮助我们改进产品体验

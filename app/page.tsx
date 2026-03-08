@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import FadeCarousel from '@/components/FadeCarousel'
@@ -72,7 +73,7 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Star className="w-4 h-4" />
-                Focus Companion
+                focus companion tool
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-display mb-6 leading-tight">
@@ -84,9 +85,9 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <a href={config.download.windows} className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg cursor-pointer transition-all duration-200 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
+                <Link href="/download" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-white px-8 py-4 rounded-full font-semibold shadow-lg cursor-pointer transition-all duration-200 hover:bg-orange-600 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
                   Try Now
-                </a>
+                </Link>
                 <Link href="#features" className="inline-flex items-center justify-center gap-2 bg-white text-gray-700 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 cursor-pointer transition-all duration-200 hover:border-orange-300 hover:text-orange-600 hover:shadow-lg">
                   Learn More
                 </Link>
@@ -101,15 +102,8 @@ export default function Home() {
                       </div>
                     ))}
                   </div>
-                  <div>
-                    <div className="flex items-center gap-1 mb-1">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <div className="font-semibold text-gray-800">5.0 Excellent</div>
+                  <div className="text-lg text-gray-600 font-medium">
+                    Trusted by hundreds of users
                   </div>
                 </div>
                 <div className="flex items-center gap-6 pt-4 border-t border-gray-100">
@@ -119,13 +113,13 @@ export default function Home() {
                   </div>
                   <div className="w-px h-10 bg-gray-200"></div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-600">99%</div>
-                    <div className="text-sm text-gray-500">Satisfaction</div>
+                    <div className="text-2xl font-bold text-orange-600">2026</div>
+                    <div className="text-sm text-gray-500">Coming Soon</div>
                   </div>
                   <div className="w-px h-10 bg-gray-200"></div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-orange-600">24h</div>
-                    <div className="text-sm text-gray-500">Focus Hours</div>
+                    <div className="text-2xl font-bold text-orange-600">AI</div>
+                    <div className="text-sm text-gray-500">Powered</div>
                   </div>
                 </div>
               </div>
@@ -142,7 +136,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full mb-6">
-              <span className="text-orange-600 font-semibold text-sm">✨ New Experience</span>
+              <span className="text-orange-600 font-semibold text-sm">New Experience</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
               Smart Focus, <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">Completely New</span>
@@ -360,13 +354,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-full shadow-lg">
-                <span className="font-semibold">🎯 Smart Focus Monitoring</span>
+                <span className="font-semibold">Smart Focus Monitoring</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold font-display">
                 Let the little fox be your
                 <span className="block mt-2 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                  Focus Companion
+                  focus companion tool
                 </span>
               </h2>
               
@@ -504,7 +498,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-full shadow-lg mb-6">
-              <span className="font-semibold">📊 Real-time Data Report</span>
+              <span className="font-semibold">Real-time Data Report</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
               Professional <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">Data Analysis Report</span>
@@ -629,7 +623,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full mb-6">
-              <span className="text-orange-600 font-semibold text-sm">⬇️ Free Download</span>
+              <span className="text-orange-600 font-semibold text-sm">Free Download</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold font-display mb-6 bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
               Download Now, Start Your Focus Journey
@@ -644,10 +638,16 @@ export default function Home() {
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center shadow-xl">
-                    <div className="text-3xl">🦊</div>
+                    <Image 
+                      src="/98989.png" 
+                      alt="FoxMate Logo" 
+                      width={40} 
+                      height={40}
+                      className="w-10 h-10 object-contain"
+                    />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-800">FoxMate AI</h3>
+                    <h3 className="text-2xl font-bold text-gray-800">FoxMate.ai</h3>
                     <p className="text-gray-500">v1.0.0 Official</p>
                   </div>
                 </div>
@@ -668,12 +668,12 @@ export default function Home() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <a href={config.download.windows} className="flex-1 bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl flex items-center justify-center gap-3 cursor-pointer transition-all duration-200 hover:bg-orange-600 hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0">
+                  <Link href="/download" className="flex-1 bg-orange-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl flex items-center justify-center gap-3 cursor-pointer transition-all duration-200 hover:bg-orange-600 hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                     Download Windows
-                  </a>
+                  </Link>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">File Size: {config.download.fileSize}</p>
               </div>
@@ -686,7 +686,7 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <p className="text-gray-600 font-medium">Your cute focus companion on desktop</p>
+                <p className="text-gray-600 font-medium">Your cute focus companion tool on desktop</p>
               </div>
             </div>
           </div>
@@ -702,13 +702,13 @@ export default function Home() {
             Join thousands of users using FoxMate to boost productivity. Start your focus journey today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href={config.download.windows} className="inline-flex items-center justify-center gap-2 bg-white text-orange-500 px-8 py-4 rounded-full font-semibold text-lg shadow-lg cursor-pointer transition-all duration-200 hover:bg-orange-50 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
+            <Link href="/download" className="inline-flex items-center justify-center gap-2 bg-white text-orange-500 px-8 py-4 rounded-full font-semibold text-lg shadow-lg cursor-pointer transition-all duration-200 hover:bg-orange-50 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
               Try Free Now
               <ChevronRight className="w-5 h-5" />
-            </a>
-            <a href={config.download.windows} className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-8 py-4 rounded-full font-semibold text-lg cursor-pointer transition-all duration-200 hover:bg-white/10 hover:shadow-lg">
+            </Link>
+            <Link href="/download" className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-8 py-4 rounded-full font-semibold text-lg cursor-pointer transition-all duration-200 hover:bg-white/10 hover:shadow-lg">
               Download App
-            </a>
+            </Link>
           </div>
           <div className="flex items-center justify-center gap-8 text-white/80">
             {['Free Start', 'No Credit Card', 'Cancel Anytime'].map((item, index) => (
@@ -727,7 +727,7 @@ export default function Home() {
             <div className="text-6xl mb-4">💻</div>
             <div className="bg-orange-50 rounded-2xl p-6">
               <div className="text-2xl font-bold text-gray-800">FoxMate AI Desktop</div>
-              <div className="text-gray-500 mt-2">Your cute focus companion on desktop</div>
+              <div className="text-gray-500 mt-2">Your cute focus companion tool on desktop</div>
               <div className="mt-4 flex items-center gap-4">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>

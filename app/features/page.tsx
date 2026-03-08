@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 import { MessageCircle, BarChart2, Heart, Shield, Sparkles, TrendingUp } from 'lucide-react'
 
 export default function Features() {
@@ -143,7 +144,13 @@ export default function Features() {
             <div className="card p-0 overflow-hidden">
               <div className="bg-primary-100 h-64 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-6xl mb-4">🦊</div>
+                  <Image 
+                    src="/98989.png" 
+                    alt="FoxMate Logo" 
+                    width={60} 
+                    height={60}
+                    className="w-16 h-16 object-contain mx-auto mb-4"
+                  />
                   <p className="text-gray-600 font-medium">Desktop Pet</p>
                 </div>
               </div>

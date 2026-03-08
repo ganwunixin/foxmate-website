@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 import { Heart, Users, Target, Sparkles } from 'lucide-react'
 
 export default function About() {
@@ -56,7 +57,13 @@ export default function About() {
             In this era of information explosion, focus has become a scarce resource. We hope to use AI technology
             to help everyone better manage their attention and improve work and study efficiency.
           </p>
-          <div className="text-6xl">🦊</div>
+          <Image 
+            src="/98989.png" 
+            alt="FoxMate Logo" 
+            width={60} 
+            height={60}
+            className="w-16 h-16 object-contain"
+          />
         </div>
       </section>
 
