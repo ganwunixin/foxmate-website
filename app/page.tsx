@@ -240,66 +240,84 @@ export default function Home() {
 
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
             <div className="relative">
               <div className="bg-orange-50 rounded-[2rem] p-8 shadow-2xl border border-orange-100 relative z-10">
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-orange-700 mb-2">📊 Daily Focus Minutes</h3>
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-orange-700 mb-2">Daily Focus Minutes</h3>
                   <p className="text-gray-500">Focus data statistics for the past week</p>
                 </div>
                 
-                <div className="relative h-72">
-                  <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-gray-400 text-sm">
-                    <span>60</span>
-                    <span>45</span>
-                    <span>30</span>
-                    <span>15</span>
-                    <span>0</span>
-                  </div>
-                  
-                  <div className="ml-10 h-full flex flex-col justify-between">
-                    {[0, 1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-full border-t border-gray-200 border-dashed"></div>
-                    ))}
-                  </div>
-                  
-                  <div className="ml-10 h-full relative">
-                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="none">
+                <div className="bg-white rounded-2xl p-6 shadow-inner">
+                  <div className="relative h-64">
+                    <div className="absolute left-0 top-0 h-full flex flex-col justify-between text-gray-400 text-xs py-1">
+                      <span>60</span>
+                      <span>45</span>
+                      <span>30</span>
+                      <span>15</span>
+                      <span>0</span>
+                    </div>
+                    
+                    <div className="ml-8 h-full flex flex-col justify-between">
+                      {[0, 1, 2, 3, 4].map((i) => (
+                        <div key={i} className="w-full border-t border-gray-100"></div>
+                      ))}
+                    </div>
+                    
+                    <div className="ml-8 absolute inset-0 grid grid-cols-6 gap-2 items-end pb-5">
+                      <div className="flex flex-col items-center h-full justify-end">
+                        <div className="w-full max-w-10 bg-gradient-to-t from-orange-400 to-orange-300 rounded-t-lg" style={{ height: '60%' }}></div>
+                        <span className="text-xs text-orange-600 font-semibold mt-1">Mon</span>
+                      </div>
+                      <div className="flex flex-col items-center h-full justify-end">
+                        <div className="w-full max-w-10 bg-gradient-to-t from-orange-400 to-orange-300 rounded-t-lg" style={{ height: '75%' }}></div>
+                        <span className="text-xs text-gray-500 font-medium mt-1">Tue</span>
+                      </div>
+                      <div className="flex flex-col items-center h-full justify-end">
+                        <div className="w-full max-w-10 bg-gradient-to-t from-orange-500 to-red-400 rounded-t-lg shadow-lg" style={{ height: '90%' }}></div>
+                        <span className="text-xs text-red-600 font-semibold mt-1">Wed</span>
+                      </div>
+                      <div className="flex flex-col items-center h-full justify-end">
+                        <div className="w-full max-w-10 bg-gradient-to-t from-orange-400 to-orange-300 rounded-t-lg" style={{ height: '70%' }}></div>
+                        <span className="text-xs text-gray-500 font-medium mt-1">Thu</span>
+                      </div>
+                      <div className="flex flex-col items-center h-full justify-end">
+                        <div className="w-full max-w-10 bg-gradient-to-t from-orange-400 to-orange-300 rounded-t-lg" style={{ height: '55%' }}></div>
+                        <span className="text-xs text-gray-500 font-medium mt-1">Fri</span>
+                      </div>
+                      <div className="flex flex-col items-center h-full justify-end">
+                        <div className="w-full max-w-10 bg-gradient-to-t from-orange-400 to-orange-300 rounded-t-lg" style={{ height: '50%' }}></div>
+                        <span className="text-xs text-gray-500 font-medium mt-1">Sat</span>
+                      </div>
+                    </div>
+                    
+                    <svg className="absolute ml-8 inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 200" preserveAspectRatio="none">
                       <defs>
                         <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                           <stop offset="0%" stopColor="#f97316" />
                           <stop offset="100%" stopColor="#ef4444" />
                         </linearGradient>
                         <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                          <stop offset="0%" stopColor="#f97316" stopOpacity="0.15" />
+                          <stop offset="0%" stopColor="#f97316" stopOpacity="0.2" />
                           <stop offset="100%" stopColor="#ef4444" stopOpacity="0" />
                         </linearGradient>
                       </defs>
                       
-                      <path d="M30,90 L90,50 L150,10 L210,30 L270,70 L330,65 L330,150 L30,150 Z" fill="url(#areaGradient)" />
+                      <path d="M20,80 L85,50 L150,20 L215,60 L280,90 L345,100 L345,200 L20,200 Z" fill="url(#areaGradient)" />
                       
-                      <path d="M30,90 L90,50 L150,10 L210,30 L270,70 L330,65" fill="none" stroke="url(#lineGradient)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M20,80 L85,50 L150,20 L215,60 L280,90 L345,100" fill="none" stroke="url(#lineGradient)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                       
-                      <circle cx="30" cy="90" r="6" fill="white" stroke="#f97316" strokeWidth="3" />
-                      <circle cx="90" cy="50" r="6" fill="white" stroke="#f97316" strokeWidth="3" />
-                      <circle cx="150" cy="10" r="8" fill="white" stroke="#ef4444" strokeWidth="3" />
-                      <circle cx="210" cy="30" r="6" fill="white" stroke="#f97316" strokeWidth="3" />
-                      <circle cx="270" cy="70" r="6" fill="white" stroke="#f97316" strokeWidth="3" />
-                      <circle cx="330" cy="65" r="6" fill="white" stroke="#f97316" strokeWidth="3" />
+                      <circle cx="20" cy="80" r="5" fill="white" stroke="#f97316" strokeWidth="2" />
+                      <circle cx="85" cy="50" r="5" fill="white" stroke="#f97316" strokeWidth="2" />
+                      <circle cx="150" cy="20" r="7" fill="white" stroke="#ef4444" strokeWidth="3" />
+                      <circle cx="215" cy="60" r="5" fill="white" stroke="#f97316" strokeWidth="2" />
+                      <circle cx="280" cy="90" r="5" fill="white" stroke="#f97316" strokeWidth="2" />
+                      <circle cx="345" cy="100" r="5" fill="white" stroke="#f97316" strokeWidth="2" />
                     </svg>
-                  </div>
-                  
-                  <div className="ml-10 absolute bottom-0 w-full flex justify-around text-gray-600 font-medium text-sm">
-                    <span className="text-orange-600 font-semibold">Mon</span>
-                    <span>Tue</span>
-                    <span className="text-red-600 font-semibold">Wed</span>
-                    <span>Thu</span>
-                    <span>Fri</span>
-                    <span>Sat</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between mt-8 pt-6 border-t border-orange-100">
+                <div className="flex items-center justify-between mt-6 pt-4 border-t border-orange-100">
                   <div>
                     <p className="text-gray-500 text-sm">Total This Week</p>
                     <p className="text-2xl font-bold text-gray-800">6.2 Hours</p>
