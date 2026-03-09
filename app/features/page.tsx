@@ -145,7 +145,7 @@ export default function Features() {
               <div className="bg-primary-100 h-64 flex items-center justify-center">
                 <div className="text-center">
                   <Image 
-                    src="/98989.png" 
+                    src="/fMtFShZxa.png" 
                     alt="FoxMate Logo" 
                     width={60} 
                     height={60}

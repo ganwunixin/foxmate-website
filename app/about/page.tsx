@@ -58,7 +58,7 @@ export default function About() {
             to help everyone better manage their attention and improve work and study efficiency.
           </p>
           <Image 
-            src="/98989.png" 
+            src="/fMtFShZxa.png" 
             alt="FoxMate Logo" 
             width={60} 
             height={60}

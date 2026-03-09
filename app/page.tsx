@@ -657,7 +657,7 @@ export default function Home() {
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center shadow-xl">
                     <Image 
-                      src="/98989.png" 
+                      src="/fMtFShZxa.png" 
                       alt="FoxMate Logo" 
                       width={40} 
                       height={40}

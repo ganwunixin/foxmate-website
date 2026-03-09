@@ -370,7 +370,7 @@ export default function SurveyPage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             <Image 
-              src="/98989.png" 
+              src="/fMtFShZxa.png" 
               alt="FoxMate Logo" 
               width={60} 
               height={60}

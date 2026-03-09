@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <Image 
-                src="/98989.png" 
+                src="/fMtFShZxa.png" 
                 alt="FoxMate Logo" 
                 width={40} 
                 height={40}
@@ -84,7 +84,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 FoxMate AI. All rights reserved.
+            © 2026 FoxMate AI. All rights reserved.
           </p>
         </div>
       </div>

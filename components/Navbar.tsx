@@ -14,11 +14,11 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-3">
             <Image 
-              src="/98989.png" 
+              src="/fMtFShZxa.png" 
               alt="FoxMate Logo" 
-              width={40} 
-              height={40}
-              className="w-10 h-10 object-contain"
+              width={48} 
+              height={48}
+              className="w-12 h-12 object-contain"
             />
             <span className="text-2xl font-bold gradient-text font-display">FoxMate.ai</span>
           </Link>
