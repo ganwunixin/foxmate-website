@@ -1,9 +1,9 @@
 export const config = {
   download: {
-    windows: 'https://foxmate.sfo3.cdn.digitaloceanspaces.com/FoxMate%20AI.zip',
+    windows: 'https://foxmate2.sfo3.cdn.digitaloceanspaces.com/FoxMate%20AI_setup.exe',
     mac: '',
-    version: 'v1.0.0',
-    fileSize: '~400MB',
+    version: 'v1.1.0',
+    fileSize: '~50MB',
   },
   app: {
     name: 'FoxMate',
