@@ -1,3 +1,11 @@
 [12140:25604:0304/210610.105:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.v5.filemap.sogouime
 [12140:25604:0304/210610.105:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
 [12140:25604:0304/210610.105:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:5
+[44568:35876:0316/112154.629:ERROR:biz_prom_shiply_util.cpp(148)] BIZ Failed to open file: C:\ProgramData\SogouInput\ShiplyUpdate\ime_perf_1\meta.dat
+[44568:35876:0316/112154.630:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.v4.filemap.sogouime
+[44568:35876:0316/112154.630:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[44568:35876:0316/112154.630:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:4
+[36288:42016:0316/113752.959:ERROR:biz_prom_shiply_util.cpp(148)] BIZ Failed to open file: C:\ProgramData\SogouInput\ShiplyUpdate\ime_perf_1\meta.dat
+[36288:42016:0316/113752.961:WARNING:t_skinfilemap.cpp(63)] SGRenderLog:CheckUpdate newMem.OpenMem Suc, szNewMem:Local\sgime_skin.v4.filemap.sogouime
+[36288:42016:0316/113752.961:WARNING:t_skinfilemap.cpp(65)] SGRenderLog:CheckUpdate finish: old version:1
+[36288:42016:0316/113752.961:WARNING:t_skinfilemap.cpp(67)] SGRenderLog:CheckUpdate finish: new version:4
