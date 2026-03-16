@@ -55,13 +55,20 @@ export async function GET() {
       INSERT INTO version_history (version, download_url, changelog, file_size, release_date, min_version)
       VALUES (
         '1.1.0',
-        'https://foxmate2.sfo3.cdn.digitaloceanspaces.com/FoxMate%20AI_setup.exe',
-        'Initial release with focus tracking and cute fox companion',
-        '50MB',
-        '2026-03-01',
+        'https://foxmate2.sfo3.cdn.digitaloceanspaces.com/FoxMate_AI_v1.1.0.zip',
+        '- 新增一键自动更新功能
+- 新增数据同步功能
+- 优化小狐狸对话框显示
+- 修复已知问题',
+        '373 MB',
+        '2026-03-16',
         '1.0.0'
       )
-      ON CONFLICT (version) DO NOTHING
+      ON CONFLICT (version) DO UPDATE SET
+        download_url = EXCLUDED.download_url,
+        changelog = EXCLUDED.changelog,
+        file_size = EXCLUDED.file_size,
+        release_date = EXCLUDED.release_date
     `)
 
     client.release()
