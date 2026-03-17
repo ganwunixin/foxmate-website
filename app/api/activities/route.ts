@@ -39,6 +39,56 @@ function sanitizeWindowTitle(title: string): string {
   return sanitized.substring(0, 200)
 }
 
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url)
+    const limit = parseInt(searchParams.get('limit') || '100')
+    const search = searchParams.get('search') || ''
+    const userId = searchParams.get('user_id') || ''
+
+    const client = await pool.connect()
+    
+    let query = `SELECT * FROM user_activities`
+    const conditions: string[] = []
+    const params: (string | number)[] = []
+    let paramIndex = 1
+
+    if (search) {
+      conditions.push(`(app_name ILIKE $${paramIndex} OR window_title ILIKE $${paramIndex})`)
+      params.push(`%${search}%`)
+      paramIndex++
+    }
+
+    if (userId) {
+      conditions.push(`user_id = $${paramIndex}`)
+      params.push(userId)
+      paramIndex++
+    }
+
+    if (conditions.length > 0) {
+      query += ` WHERE ${conditions.join(' AND ')}`
+    }
+
+    query += ` ORDER BY timestamp DESC LIMIT $${paramIndex}`
+    params.push(limit)
+
+    const result = await client.query(query, params)
+    client.release()
+
+    return Response.json({
+      success: true,
+      count: result.rows.length,
+      activities: result.rows
+    })
+  } catch (error) {
+    console.error('API Error:', error)
+    return Response.json(
+      { error: 'Failed to fetch data' },
+      { status: 500 }
+    )
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const data: ActivityData[] = await request.json()
