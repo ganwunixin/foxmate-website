@@ -57,7 +57,7 @@ export default function DownloadPage() {
                 </div>
               </div>
 
-              <a href={config.download.windows} className="btn-primary w-full flex items-center justify-center space-x-2 cursor-pointer">
+              <a href={config.download.url} className="btn-primary w-full flex items-center justify-center space-x-2 cursor-pointer">
                 <DownloadIcon className="w-5 h-5" />
                 <span>Download Windows Version</span>
               </a>
