@@ -2,7 +2,7 @@ export const config = {
   siteUrl: 'https://foxmate-website.vercel.app',
   download: {
     version: 'v1.2.0',
-    url: 'https://foxmate2.sfo3.digitaloceanspaces.com/FoxMateAI_v1.2.0.zip',
+    url: 'https://foxmate2.sfo3.digitaloceanspaces.com/FoxMateAI_v1.2.0.rar',
     mac: '',
     fileSize: '350 MB',
     releaseDate: '2026-03-18',
