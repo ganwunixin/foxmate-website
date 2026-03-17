@@ -17,6 +17,11 @@ interface ActivityData {
   mouse_px_per_min: number
   focus_score: number
   tags: string
+  country?: string
+  region?: string
+  city?: string
+  timezone?: string
+  language?: string
 }
 
 function generateUserId(): string {
@@ -108,8 +113,8 @@ export async function POST(request: Request) {
 
       await client.query(
         `INSERT INTO user_activities 
-         (user_id, timestamp, app_name, window_title, keystrokes_per_min, mouse_px_per_min, focus_score, tags)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+         (user_id, timestamp, app_name, window_title, keystrokes_per_min, mouse_px_per_min, focus_score, tags, country, region, city, timezone, language)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`,
         [
           userId,
           item.timestamp,
@@ -118,7 +123,12 @@ export async function POST(request: Request) {
           item.keystrokes_per_min,
           item.mouse_px_per_min,
           item.focus_score,
-          item.tags
+          item.tags,
+          item.country || 'Unknown',
+          item.region || 'Unknown',
+          item.city || 'Unknown',
+          item.timezone || 'Unknown',
+          item.language || 'Unknown'
         ]
       )
     }

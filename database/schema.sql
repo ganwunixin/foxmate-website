@@ -8,6 +8,11 @@ CREATE TABLE IF NOT EXISTS user_activities (
     mouse_px_per_min INTEGER,
     focus_score DECIMAL(5,2),
     tags VARCHAR(100),
+    country VARCHAR(50),
+    region VARCHAR(50),
+    city VARCHAR(50),
+    timezone VARCHAR(50),
+    language VARCHAR(20),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
