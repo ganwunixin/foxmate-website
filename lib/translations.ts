@@ -178,7 +178,7 @@ export const translations = {
       badge: '⬇️ Free Download',
       title: 'Download Now, Start Your Focus Journey',
       description: 'FoxMateAI is completely free, supports Windows system, let your desktop companion be with you instantly',
-      version: 'v1.0.0 Official',
+      version: 'v1.2.0 Official',
       features: [
         'Windows 10/11 Support',
         'No internet required, runs locally',
@@ -378,7 +378,7 @@ export const translations = {
       badge: '⬇️ 免费下载',
       title: '立即下载，开启您的专注之旅',
       description: 'FoxMateAI完全免费，支持Windows系统，让您的桌面伙伴即刻陪伴您',
-      version: 'v1.0.0 正式版',
+      version: 'v1.2.0 正式版',
       features: [
         '支持 Windows 10/11',
         '无需联网，本地运行',

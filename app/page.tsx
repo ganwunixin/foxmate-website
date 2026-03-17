@@ -666,7 +666,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-800">FoxMate.ai</h3>
-                    <p className="text-gray-500">v1.0.0 Official</p>
+                    <p className="text-gray-500">{config.download.version} Official</p>
                   </div>
                 </div>
                 
@@ -751,7 +751,7 @@ export default function Home() {
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   <span className="text-sm text-gray-600">Online</span>
                 </div>
-                <div className="text-sm text-gray-500">v1.0.0</div>
+                <div className="text-sm text-gray-500">{config.download.version}</div>
               </div>
             </div>
           </div>
