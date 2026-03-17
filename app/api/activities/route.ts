@@ -22,6 +22,10 @@ interface ActivityData {
   city?: string
   timezone?: string
   language?: string
+  source?: string
+  referrer_id?: string
+  app_version?: string
+  os_version?: string
 }
 
 function generateUserId(): string {
@@ -113,8 +117,8 @@ export async function POST(request: Request) {
 
       await client.query(
         `INSERT INTO user_activities 
-         (user_id, timestamp, app_name, window_title, keystrokes_per_min, mouse_px_per_min, focus_score, tags, country, region, city, timezone, language)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`,
+         (user_id, timestamp, app_name, window_title, keystrokes_per_min, mouse_px_per_min, focus_score, tags, country, region, city, timezone, language, source, referrer_id, app_version, os_version)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17)`,
         [
           userId,
           item.timestamp,
@@ -128,7 +132,11 @@ export async function POST(request: Request) {
           item.region || 'Unknown',
           item.city || 'Unknown',
           item.timezone || 'Unknown',
-          item.language || 'Unknown'
+          item.language || 'Unknown',
+          item.source || 'direct',
+          item.referrer_id || null,
+          item.app_version || 'Unknown',
+          item.os_version || 'Unknown'
         ]
       )
     }

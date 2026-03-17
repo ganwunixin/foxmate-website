@@ -13,12 +13,18 @@ CREATE TABLE IF NOT EXISTS user_activities (
     city VARCHAR(50),
     timezone VARCHAR(50),
     language VARCHAR(20),
+    source VARCHAR(50),
+    referrer_id VARCHAR(32),
+    app_version VARCHAR(20),
+    os_version VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE INDEX IF NOT EXISTS idx_user_id ON user_activities(user_id);
 CREATE INDEX IF NOT EXISTS idx_timestamp ON user_activities(timestamp);
 CREATE INDEX IF NOT EXISTS idx_app_name ON user_activities(app_name);
+CREATE INDEX IF NOT EXISTS idx_source ON user_activities(source);
+CREATE INDEX IF NOT EXISTS idx_country ON user_activities(country);
 
 CREATE TABLE IF NOT EXISTS version_history (
     id SERIAL PRIMARY KEY,
